@@ -16,8 +16,11 @@ Current can GET- ADD- DELETE todotask
 1. Set proxy, must to be a string in package.json file
 
 2. For example
-  "proxy": "https://backend.example.com"
-
+```json
+{  
+    "proxy": "https://backend.example.com"
+}
+```
 3. Run project
    npm install && npm start || yarn install && yarn start
 
@@ -45,7 +48,7 @@ Set Proxy to deloy Heroku:
             "origin": "${API_URL}"
         }
     }
-}<br/>
+}
 ```
 3. Push file to heroku
     git push heroku master
@@ -56,4 +59,6 @@ For example:<br/>
 From react:    axios.get("/api/search-items")   → ${API_URL}/search-items <br/> 
 From react:     axios.get("/api/users/me")   → ${API_URL}/users/me<br/>
 (!)Therefore, run this cmd to set proxy var in heroku: <br/>
-    heroku config:set API_URL="https://backend.example.com/api" <br/>
+```js
+heroku config:set API_URL="https://backend.example.com/api"
+```
