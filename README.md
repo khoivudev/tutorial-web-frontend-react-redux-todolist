@@ -27,6 +27,7 @@ Set Proxy to deloy Heroku:
     npm install || yarn install
 
 2. Create static.json file
+```json
 {
     "root": "build/",
     "clean_urls": false,
@@ -44,15 +45,15 @@ Set Proxy to deloy Heroku:
             "origin": "${API_URL}"
         }
     }
-}
-
+}<br/>
+```
 3. Push file to heroku
     git push heroku master
 
 4. Config proxy heroku
-All request from react contain "/api/abc" -> "/abc" 
-For example:
-From react:    axios.get("/api/search-items")   → ${API_URL}/search-items  
-From react:     axios.get("/api/users/me")   → ${API_URL}/users/me
-(!)Therefore, run this cmd to set proxy var in heroku: 
-    heroku config:set API_URL="https://backend.example.com/api" 
+All request from react contain "/api/abc" -> "/abc" <br/>
+For example:<br/>
+From react:    axios.get("/api/search-items")   → ${API_URL}/search-items <br/> 
+From react:     axios.get("/api/users/me")   → ${API_URL}/users/me<br/>
+(!)Therefore, run this cmd to set proxy var in heroku: <br/>
+    heroku config:set API_URL="https://backend.example.com/api" <br/>
