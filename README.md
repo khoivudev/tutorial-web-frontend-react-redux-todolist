@@ -2,8 +2,15 @@
 ## INTRO
 This is todo-list front-end app. <br/>
 This app call an RESTful API.<br/>
-Framework: ReactJs Class Programming<br/>
-Build: npm<br/>
+Current can GET- ADD- DELETE todotask
+- Tech: <br/>
+    + ReactJs:
+        + Class Component programming<br/>
+    + Redux : 
+        + component -> actions -> reducer -> store
+    + UI component: material-ui
+    + build packet: npm<br/>
+    + follow MERN stack programing
 
 ### DEVELOPMENT
 1. Set proxy, must to be a string in package.json file
